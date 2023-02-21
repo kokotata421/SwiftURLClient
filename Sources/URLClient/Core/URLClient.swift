@@ -54,7 +54,7 @@ open class URLClient: URLClientType {
                                  callBackQue: DispatchQueue?,
                                  progressHandler: ProgressHandler?,
                                  CompletionHandler: CompletionHandler?) -> Cancellable where Request : HTTPRequestType {
-        <#code#>
+        return SimpleCancellable()
     }
     
     @discardableResult
@@ -62,6 +62,7 @@ open class URLClient: URLClientType {
                                      callBackQue: DispatchQueue?,
                                      progressHandler: ProgressHandler?,
                                      CompletionHandler: CompletionHandler?) -> Cancellable where Request : HTTPRequestType {
+        return SimpleCancellable()
     }
    
 }
