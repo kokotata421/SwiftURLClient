@@ -30,25 +30,6 @@ public enum Method: String {
     case connect = "CONNECT"
 }
 
-public enum ValidationType {
-    case none
-    case successCodes
-    case successAndRedirectCodes
-    case customCodes([Int])
-
-    var statusCodes: [Int] {
-        switch self {
-        case .successCodes:
-            return Array(200..<300)
-        case .successAndRedirectCodes:
-            return Array(200..<400)
-        case .customCodes(let codes):
-            return codes
-        case .none:
-            return []
-        }
-    }
-}
 
 public enum Authorization {
     case none
