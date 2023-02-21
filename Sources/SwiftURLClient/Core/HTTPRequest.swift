@@ -10,7 +10,7 @@ import Foundation
 public protocol HTTPRequestType {
     var baseURL: URL { get }
     var path: String { get }
-    var method: HttpMethod { get }
+    var method: Method { get }
     var headerFields: [String: String]? { get }
     var queryParameters: [String: String]? { get }
     var validation: ValidationType { get }
@@ -18,7 +18,7 @@ public protocol HTTPRequestType {
     var authorization: Authorization { get }
 }
 
-public enum HttpMethod: String {
+public enum Method: String {
     case options = "OPTIONS"
     case get     = "GET"
     case head    = "HEAD"
